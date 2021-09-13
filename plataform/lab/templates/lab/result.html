@@ -1,0 +1,24 @@
+{% extends 'lab/base.html' %}
+{% load crispy_forms_tags %}
+<!-- ESSA HTML FOI DESCONTINUADA -->
+{% block content %}
+
+    {% if data %}
+        <h1 class="result-text">Exame: {{exame}}</h1>
+        <h1 class="result-text">Paciente: {{paciente}}</h1>
+        <h1 class="result-text">{{executor}}</h1>
+        <h1 class="result-text">{{paciente_sus}}</h1>
+        <h1 class="result-text">{{paciente_sexo}}</h1>
+        <h1 class="result-text">{{paciente_nascimento}}</h1>
+        <h1 class="result-text">{{medico_nome}}</h1>
+        <h1 class="result-text">{{medico_email}}</h1>
+        <h1 class="result-text">{{medico_crm}}</h1>
+        <h1 class="result-text">{{medico_estadocrm}}</h1>
+        <h1 class="result-text">{{executor_id}}</h1>
+        <h1 class="result-text">{{unidade_saude}}</h1>
+    {% else %}
+        <h1 class="result-text">No results found</h1>
+
+    {% endif %}
+
+{% endblock %}

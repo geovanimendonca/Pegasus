@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+    <head>
+        <title>Solicitação de exames</title>
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/lab.css' %}">
+        
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Solicitação de exames - Pegasus</a></h1>
+            
+        </div>
+        <div class = "sub_menu">
+            {% if user.is_authenticated %}
+                <!-- <a class="btn-exit-account" href="/logout"><span class="glyphicon glyphicon-user"> {{ user.get_username }} &nbsp</span></a> -->
+                <a class="btn-exit-account" href="/logout"><span class="glyphicon glyphicon-user"> Sair</span></a> 
+               <!--  <br><br><br> -->
+                <a href="{% url 'post_new' %}" class="btn-new-exam">Solicitar exame</span></a>
+                <a class="editar_perfil" href="/edit_profile">   Editar perfil</a> 
+                <a class = "editar_perfil" href = "/mapa" > Exibir mapa</a>
+                <!-- <br><br><br> -->   
+                
+            {% else %}
+                <a class="btn-enter-account" href="/login"><span class="glyphicon glyphicon-user"> Login</span></a> 
+                <!-- <br><br><br> -->
+            {% endif %} 
+        </div>
+            
+        <div class="row">
+            <div class="col-sm">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

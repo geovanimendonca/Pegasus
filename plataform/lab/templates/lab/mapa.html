@@ -1,0 +1,115 @@
+{% extends 'lab/base.html' %}
+{% block content %} 
+{% if user.is_authenticated %} 
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6efb99dc59994d0f9c7c4941bc31f9dd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6efb99dc59994d0f9c7c4941bc31f9dd" ></div>
+        
+</body>
+<script>    
+    
+            var map_6efb99dc59994d0f9c7c4941bc31f9dd = L.map(
+                "map_6efb99dc59994d0f9c7c4941bc31f9dd",
+                {
+                    center: [-22.8796755, -43.2508881],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[-84, -220], [84, 220]],
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_08a41de892ff4af0b1d9de58edeef04a = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6efb99dc59994d0f9c7c4941bc31f9dd);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topright", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_6efb99dc59994d0f9c7c4941bc31f9dd);
+        
+    
+            var marker_cluster_dd01400ac2d24b41819b7684e7c18e7b = L.markerClusterGroup(
+                {}
+            );
+            map_6efb99dc59994d0f9c7c4941bc31f9dd.addLayer(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+    
+            var marker_f36c257dfe61441191b13b318c682eee = L.marker(
+                [-22.8796755, -43.2508881],
+                {}
+            ).addTo(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+    
+            var marker_0061ebbfffd34fffa42b54c32be9ec74 = L.marker(
+                [-22.8796755, -43.2508881],
+                {}
+            ).addTo(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+    
+            var marker_dfa3e236b91a417dbb6868fb119a4a36 = L.marker(
+                [-22.8796755, -43.2508881],
+                {}
+            ).addTo(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+    
+            var marker_82b6959beaf14719a993286fc580b224 = L.marker(
+                [-22.8796755, -43.2508881],
+                {}
+            ).addTo(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+    
+            var marker_3b16547613e14bd69571e71d230be011 = L.marker(
+                [-22.8796755, -43.2508881],
+                {}
+            ).addTo(marker_cluster_dd01400ac2d24b41819b7684e7c18e7b);
+        
+</script>
+{% endif %}
+{% endblock %}

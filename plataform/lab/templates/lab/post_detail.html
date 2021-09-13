@@ -1,0 +1,33 @@
+{% extends 'lab/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <h5 class=" detail">
+                {{ post.published_date }}
+            </h5>
+        {% endif %}
+        
+        <h2 class=" detail">Código: {{ post.four_digit_code }}</h2>
+        <h2 class=" detail">Exame: {{ post.Exame }}</h2>
+        <h3 class=" detail">Paciente: {{post.Nome_do_paciente}}</h3>
+        <h3 class=" detail">Cpf: {{post.Cpf_paciente}}</h3>
+        <h3 class=" detail">Sexo: {{post.Sexo}}</h3>
+        <h3 class=" detail">Data de nascimento: {{ post.Data_de_nascimento}}</h3>
+        <br>
+
+        {% if caminho_laudo %}
+         <a class = "caminho-laudo" href = "{% static caminho_laudo%}" > Exibir resultado</a> 
+        {% else %}
+        <h1 class="result-text">Nenhum resultado encontrado</h1>
+        {% endif %}
+
+        <br><br><br>
+
+        <a href="{% url 'post_edit' pk=post.pk %}" class="btn-edit-post" ><span class="glyphicon glyphicon-pencil"></span></a>
+        <!-- <a href="{% url 'result' pk=post.pk%}" class="btn-enter-account"><span class="glyphicon glyphicon-eye-open"></span></a>-->
+        <a href="{% url 'delete' pk=post.pk %}" class="btn-delete"><span class="glyphicon glyphicon-remove"></span></a>
+        <br><br>
+
+    </div>
+{% endblock %}

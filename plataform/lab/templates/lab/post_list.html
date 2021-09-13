@@ -1,0 +1,27 @@
+{% extends 'lab/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    <!-- <span class="glyphicon glyphicon-plus"> -->
+    <!-- <div class="post-list"> -->
+    <!-- <a href="{% url 'post_new' %}" class="btn-new-exam">Solicitar exame</span></a> -->
+    <!-- <div class="content container">-->
+{% endif %}
+
+        {% for post in posts %}
+        {% if user.is_authenticated %}
+            {% if user.get_username == post.author %}
+            <div class="post-list">   
+                   <!-- <div class="date">-->
+                    <!-- </div> -->
+                    <h3><a href="{% url 'post_detail' pk=post.pk %}">Exame: {{ post.Exame}} Código: {{post.four_digit_code}}</a></h3>
+                    <h4>Paciente: {{post.Nome_do_paciente}}</h4>
+                    
+                    <!-- {{ post.published_date }} -->
+                    <br>
+    </div>
+            {% endif %}
+        {% endif %}   
+    {% endfor %}
+{% endblock %}

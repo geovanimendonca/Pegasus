@@ -1,0 +1,273 @@
+h1 a {
+    color: #000000; 
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+h2 a{   
+    color: #000000; 
+    background-color: #e7e7e7;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.text-account{
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #000000;
+    font-size: x-large;
+    text-align: center;
+    text-decoration: solid;
+}
+
+
+
+.classe_editar_perfil{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.btn-enter-account{
+    color: #018507;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-delete{
+    color: #e91212;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-edit-post{
+    color: #1013bd;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.detail{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 25em;
+}
+
+.result-text{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 25em;
+}
+
+.text-exit-acount{
+    color: #000000;
+    font-size: medium;
+    margin-left: 1%;
+}
+
+.text-new-post{
+    color: #000000;
+    font-size: medium;
+    margin-left: 5%;
+}
+
+.content {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.date {
+    color: #000000;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.save {
+    float: right;
+    font-size: medium;
+}
+
+.form-group{
+    font-size:small;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.form-group input {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.post-form{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.post-form textarea, .post-form input, .post-form select {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
+    
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #2c811d;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.post {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #000000;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.detail_novo_exame {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.auth-card{
+    margin-bottom: 45%;
+    font-size: medium;
+}
+
+.post-form-profile{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.update_button {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #000000;
+}
+
+.post-form-profile textarea, .post-form-profile input {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.post-list{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.caminho-laudo{
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.sub_menu {
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.btn-exit-account{
+    color: #ff0000;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.btn-new-exam{
+    color: #006e06;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.editar_perfil{
+    color: #000000a6;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    padding-right: 40px;
+}

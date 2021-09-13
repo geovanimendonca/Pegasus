@@ -1,0 +1,12 @@
+{% extends 'lab/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class = "classe_editar_perfil">
+        <p class= "detail_novo_exame">Atualize suas informações </p>
+        
+    </div>
+    <form method="POST" class="post-form-profile">{% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Atualizar perfil</button> 
+    </form>
+{% endblock %}
