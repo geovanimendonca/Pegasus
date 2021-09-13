@@ -1,0 +1,703 @@
+<CreateAccountWindow>:
+    name: "create"
+
+    namee: namee
+    email: email
+    password: passw
+    
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+
+    canvas:
+        RoundedRectangle:
+            pos: 370,175
+            size: 300, 280
+        RoundedRectangle:
+            pos: 20, 45
+            size: 750, 100
+
+    FloatLayout:
+
+        Image:
+            source:'Wallpaper/logo_fiocruz.png'
+            pos_hint:{"x":0.05,"y":0.05}
+            size_hint: 0.3,0.3
+            
+        Image:
+            source:'Wallpaper/logo_ibmp.png'
+            pos_hint:{"x":0.65,"y":0.05}
+            size_hint: 0.3,0.3
+        
+        Label:
+            text: "Crie sua"
+            size_hint: 0.01, 0.1
+            color:[0,0,0,1]
+            #bold:True
+            pos_hint: {"x":0.22, "y":0.75}
+            font_size: 36
+            
+        Label:
+            text: "conta"
+            size_hint: 0.01, 0.1
+            color:[0,0,0,1]
+            #bold:True
+            pos_hint: {"x":0.22, "y":0.65}
+            font_size: 36
+        #Label:
+        #    text: "Pegasus"
+        #    size_hint: 0.01, 0.1
+        #    color:[0,0,0,1]
+        #    bold:True
+        #    pos_hint: {"x":0.22, "y":0.55}
+        #    font_size: 36
+
+        TextInput:
+            pos_hint: {"x":0.5, "y":0.8}
+            font_size: 22
+            size_hint: 0.3, 0.08
+            id: namee
+            hint_text:"Nome"
+            multiline: False
+           
+        TextInput:
+            pos_hint: {"x":0.5, "y":0.7}
+            font_size: 22
+            size_hint: 0.3, 0.08
+            id: email
+            hint_text:"E-mail"
+            multiline: False
+
+        TextInput:
+            pos_hint: {"x":0.5, "y":0.6}
+            font_size: 22
+            size_hint: 0.3, 0.08
+            id: passw
+            multiline: False
+            password: True
+            hint_text:"Senha"
+         
+        #Button:
+        #    pos_hint:{"x":0.94,"y":0.94}
+        #    size_hint: 0.05, 0.05
+        #    font_size: 20
+        #    text: "X"
+        #    color:[1,1,1,1]
+        #    on_release:
+        #        root.manager.transition.duration=0
+        #        root.close_app()   
+        Button:
+            pos_hint:{"x":0.56,"y":0.5}
+            size_hint: 0.18, 0.08
+            text: "Continuar"
+            font_size: 26
+            halign: 'center'
+            valign: 'center'
+          
+            on_release:
+                root.manager.transition.duration=0
+                root.submit()
+            
+        Button:
+            pos_hint:{"x":0.56,"y":0.4}
+            size_hint: 0.18, 0.1
+            background_color:[0,0,0,0]
+            color:[0,0,0,1]
+            underline:True
+            font_size: 22
+            text: "Já tenho uma conta!"
+            on_release:
+                root.manager.transition.duration=0
+                root.login()
+
+<LoginWindow>:
+    name: "login"
+
+    email: email
+    password: password
+    
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+
+    canvas:
+        RoundedRectangle:
+            pos: 370,175
+            size: 300, 280
+        RoundedRectangle:
+            pos: 20, 45
+            size: 750, 100
+
+    FloatLayout:
+
+        Image:
+            source:'Wallpaper/logo_fiocruz.png'
+            pos_hint:{"x":0.05,"y":0.05}
+            size_hint: 0.3,0.3
+            
+        Image:
+            source:'Wallpaper/logo_ibmp.png'
+            pos_hint:{"x":0.65,"y":0.05}
+            size_hint: 0.3,0.3
+            
+        Label:
+            text:"Bem-vindo!"
+            font_size: 30
+            pos_hint: {"x":0.22, "y":0.75}
+            bold: True
+            color:[0,0,0,1]
+            size_hint: 0.01, 0.1
+            
+        Label:
+            text:"Por favor, "
+            font_size: 28
+            color:[0,0,0,1]
+            pos_hint: {"x":0.22, "y":0.55}
+            size_hint: 0.01, 0.1
+        Label:
+            text:"identifique-se! "
+            font_size: 28
+            color:[0,0,0,1]
+            pos_hint: {"x":0.22, "y":0.45}
+            size_hint: 0.01, 0.1
+
+        TextInput:
+            id: email
+            font_size: 22
+            multiline: False
+            hint_text:"E-mail"
+            color:0,0,0,1
+            pos_hint: {"x": 0.5 , "y":0.8}
+            size_hint: 0.3, 0.08
+
+        TextInput:
+            id: password
+            font_size: 22
+            hint_text:"Senha"
+            color:0,0,0,1
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.5, "y":0.7}
+            size_hint: 0.3, 0.08
+
+        Button:
+            pos_hint:{"x":0.56,"y":0.5}
+            size_hint: 0.18, 0.08
+            text: "Continuar"
+            font_size: 26
+            halign: 'center'
+            valign: 'center'
+            on_release:
+                root.manager.transition.duration=0
+                root.loginBtn()
+    
+        Button:
+            pos_hint:{"x":0.56,"y":0.4}
+            size_hint: 0.18, 0.1
+            background_color:[0,0,0,0]
+            color:[0,0,0,1]
+            underline:True
+            font_size: 22
+            text: "Criar conta"
+            on_release:
+                root.manager.transition.duration=0
+                root.createBtn()
+
+<MainWindow>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+    FloatLayout:
+        
+            
+        Label:
+            text:"O que deseja fazer?"
+            font_size: 45
+            pos_hint: {"x":0.25, "y":0.85}
+            #bold: True
+            color:[0,0,0,1]
+            size_hint: 0.5, 0.1
+            
+       # Button:
+       #     pos_hint:{"center_x":0.1,"center_y":0.9}
+       #     size_hint:0.1,0.15
+            
+            
+            
+        Button:
+            pos_hint:{"x":0.155,"y":0.25}
+            size_hint: 0.3, 0.45
+            background_normal :'Wallpaper/button_perform_tests.png'
+            background_down : 'Wallpaper/button_perform_tests.png'
+            on_release:
+                root.manager.transition.duration=0
+                root.tipoexame()
+                
+        Button:
+            pos_hint:{"x":0.535,"y":0.25}
+            size_hint: 0.3, 0.45
+            background_normal :'Wallpaper/button_consult_history.png'
+            background_down : 'Wallpaper/button_consult_history.png'
+            on_release:
+                root.manager.transition.duration=0
+                
+        
+<TipoExame>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+    FloatLayout:
+        Button:
+            pos_hint:{"x":0.175,"y":0.5}
+            size_hint: 0.3, 0.15
+            font_size: 24
+            text: "Covid-19"
+            color:[0,0,0,1]
+            
+            background_color:[0,0,0,0]
+            back_color:(1,1,1,1)
+            border_color:(0,0,0,1)
+            border_radius:[5]
+            canvas.before:
+                Color:
+                    rgba:self.back_color
+                RoundedRectangle:
+                    size: self.size
+                    pos:self.pos
+                    #radius: self.border_radius
+                Color:
+                    rgba: self.border_color
+                Line:
+                    #rounded_rectangle:(self.pos[0],self.pos[1],self.size[0],self.size[1],self.border_radius[0])
+                    width: 1
+        
+            on_release:
+                root.manager.transition.duration=0
+                root.covid()
+        Button:
+            pos_hint:{"x":0.525,"y":0.5}
+            size_hint: 0.35, 0.15
+            font_size: 24
+            text: "Leishmaniose"
+            color:[0,0,0,1]
+            
+            background_color:[0,0,0,0]
+            back_color:(1,1,1,1)
+            border_color:(0,0,0,1)
+            border_radius:[5]
+            canvas.before:
+                Color:
+                    rgba:self.back_color
+                RoundedRectangle:
+                    size: self.size
+                    pos:self.pos
+                Color:
+                    rgba: self.border_color
+                Line:
+                    #rounded_rectangle:(self.pos[0],self.pos[1],self.size[0],self.size[1],self.border_radius[0])
+                    width: 1
+            on_release:
+                root.manager.transition.duration=0
+                root.leishmania()
+        Button:
+            pos_hint:{"x":0.02,"y":0.93}
+            size_hint:0.06,0.06
+            font_size: 24
+            text: "Voltar"
+            color:[1,1,1,1]
+        
+            background_color:[0,0,0,0]
+            back_color:(0.1,0.1,0.1,1)
+            border_radius:[5]
+            canvas.before:
+                Color:
+                    rgba:self.back_color
+                RoundedRectangle:
+                    size: self.size
+                    pos:self.pos
+            on_release:
+                root.manager.transition.duration=0
+                root.voltar()
+        Button:
+            pos_hint:{"x":0.94,"y":0.94}
+            size_hint: 0.05, 0.05
+            font_size: 24
+            text: "X"
+            color:[1,1,1,1]
+            
+            background_color:[0,0,0,0]
+            back_color:(0.1,0.1,0.1,1)
+            border_color:(1,0,0,1)
+            border_radius:[5]
+            canvas.before:
+                Color:
+                    rgba:self.back_color
+                RoundedRectangle:
+                    size: self.size
+                    pos:self.pos
+            on_release:
+                root.manager.transition.duration=0
+                root.close_app()
+<Play>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+    relogio: relogio
+    temperatura:temperatura
+    FloatLayout:
+
+        Image:
+            id: imagem_camera
+            size_hint:(0.7*1.5,0.7)
+            pos_hint:{"center_x":0.25,"center_y":0.5}
+            allow_stretch: True
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: 270
+                    origin: self.center
+            canvas.after:
+                PopMatrix
+                
+        Button:
+            id: start_button
+            text: "Iniciar"
+            on_press:
+                root.call()
+            font_size: 35
+            pos_hint:{"center_x":0.61,"y":0.45}
+            size_hint: 0.22, 0.2
+            background_color:[0,1,0,1]
+
+        Button:
+            id: stop_button
+            text: "Parar"
+            on_press:
+                root.reset()
+            font_size: 35
+            pos_hint:{"x":0.77,"y":0.45}
+            size_hint: 0.22, 0.2
+            background_color:[1,0,0,1]
+        
+        Button:
+            id: preheat
+            text: "Preaquecer"
+            font_size: 18
+            pos_hint:{"x":0.77,"y":0.05}
+            size_hint: 0.2, 0.1
+            opacity: 0
+            disabled: False
+            on_press:
+                root.preaquecer()
+        
+        Button:
+            id: increase_temperature
+            text: "^"
+            on_press:
+                root.increase_setpoint_spin(1)
+                root.start_increase_setpoint_spin()
+            on_release:
+                root.stop_increase_setpoint_spin()
+            font_size: 28
+            pos_hint:{"x":0.65,"y":0.8}
+            size_hint: 0.07,0.1
+            
+        Button:
+            id: decrease_temperature
+            text: "v"
+            on_press:
+                root.decrease_setpoint_spin(1)
+                root.start_decrease_setpoint_spin()
+            on_release:
+                root.stop_decrease_setpoint_spin()
+            font_size: 25
+            pos_hint:{"x":0.65,"y":0.7}
+            size_hint: 0.07, 0.1
+
+        Button:
+            id: increase_time
+            text: "^"
+            on_press:
+                root.increase_time_spin(1)
+                root.start_increase_time_spin()
+            on_release:
+                root.stop_increase_time_spin()
+            font_size: 28
+            pos_hint:{"x":0.90,"y":0.8}
+            size_hint: 0.07,0.1
+            
+        Button:
+            id: decrease_time
+            text: "v"
+            on_press:
+                root.decrease_time_spin(1)
+                root.start_decrease_time_spin()
+            on_release:
+                root.stop_decrease_time_spin()
+            font_size: 25
+            pos_hint:{"x":0.90,"y":0.70}
+            size_hint: 0.07, 0.1
+        
+        ProgressBar:
+            id : pb
+            min :0
+            max :100
+            pos_hint: {"x": 0.6,"y":0.4}
+            size_hint_x :.4
+            size_hint_y :.15
+            value: root.pb.value
+            opacity:0
+
+        Label:
+            id:relogio
+            text: "Tempo decorrido:"
+            halign: 'left'
+            font_size: 26
+            pos_hint: {"x":0.5, "y":-0.35}
+            bold: True
+            color:[0,0,0,1]
+            text_size: self.size
+            valign: 'middle'
+            
+        Label:
+            id:temperatura
+            text: "Temperatura no chip:"
+            font_size: 26
+            pos_hint:{"x":0.5,"y":-0.25}
+            bold: True
+            color:[0,0,0,1]
+            text_size: self.size
+            valign: 'middle'
+            
+        Label:
+            id:setpointlabel
+            text:"Setpoint: 65ºC"
+            halign: 'left'
+            font_size: 26
+            pos_hint:{"x":0.5,"y":-0.15}
+            bold: True
+            color:[0,0,0,1]
+            text_size: self.size
+            valign: 'middle'
+
+        Label:
+            text:"Temperatura (ºC)"
+            halign: 'left'
+            font_size: 24
+            pos_hint:{"x":0.5,"y":0.9}
+            bold: True
+            color:[0,0,0,1]
+            size_hint: 0.2, 0.1
+
+        Label:
+            text: "Tempo (min)"
+            halign: 'left'
+            font_size: 24
+            pos_hint:{"x":0.8,"y":0.9}
+            bold: True
+            color:[0,0,0,1]
+            size_hint: 0.2, 0.1
+            
+        Label:
+            text: "65.0"
+            id: setpoint
+            halign: 'left'
+            pos_hint: {"x":0.5, "y":0.75}
+            bold: True
+            font_size: 30
+            color:[0,0,0,1]
+            size_hint: 0.2, 0.1
+            
+        Label:
+            text: "30"
+            id: tempo
+            halign: 'left'
+            pos_hint: {"x":0.77, "y":0.75}
+            bold: True
+            font_size: 30
+            color:[0,0,0,1]
+            size_hint: 0.2, 0.1
+
+<Resultado>:
+    
+    
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+            
+    FloatLayout:
+        
+       # Label:
+       #     text: "Exame realizado com sucesso!"
+       #     size_hint: 0.01, 0.1
+       #     color:[0,0,0,1]
+       #     bold:True
+       #     pos_hint: {"x":0.50, "y":0.52}
+       #     font_size: 36
+
+        Label:
+            
+            id: label_salvo
+            size_hint: 0.01, 0.1
+            color:[0,0,0,1]
+            bold:True
+            pos_hint: {"x":0.50, "y":0.50}
+            font_size: 36
+                
+        Button:
+            id:fi_nalizar
+            text: "Finalizar"
+            font_size: 22
+            pos_hint:{"x":0.60,"y":0.15}
+            size_hint: 0.15, 0.15
+            color:[1,1,1,1]
+            opacity:1
+            disabled:False
+            
+            on_press:
+                root.manager.transition.duration=0
+                root.finalizar()
+
+        Button:
+            id:fi_nalizar
+            text: "Tentar novamente"
+            font_size: 22
+            pos_hint:{"x":0.25,"y":0.15}
+            size_hint: 0.25, 0.15
+            color:[1,1,1,1]
+            opacity:1
+            disabled:False
+            
+            on_press:
+                root.manager.transition.duration=0
+                root.on_enter()
+        
+                
+         
+<Qrcode>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Wallpaper/background.png'
+
+    FloatLayout:
+
+        Label:
+            text: "Insira o código do exame"
+            font_size: 36
+            color:[0,0,0,1]
+            size_hint: 0.01, 0.1
+            pos_hint:{"x":0.5,"y":0.90}
+
+        Label:
+            font_size: 26
+            color:[0,0,0,1]
+            size_hint: 0.01, 0.1
+            pos_hint:{"x":0.5,"y":0.80}
+            id: exam_code
+
+        Button:
+            pos_hint:{"center_x":0.35,"center_y":0.7}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "1"
+            on_release:
+                root.manager.transition.duration=0
+                root.number_1()
+
+        Button:
+            pos_hint:{"center_x":0.5,"center_y":0.7}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "2"
+            on_release:
+                root.manager.transition.duration=0
+                root.number_2()
+
+        Button:
+            pos_hint:{"center_x":0.65,"center_y":0.7}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "3"
+            on_release:
+                root.manager.transition.duration=0
+                root.number_3()
+        Button:
+            pos_hint:{"center_x":0.35,"center_y":0.55}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "4"
+            on_release:
+                root.number_4()
+        Button:
+            pos_hint:{"center_x":0.5,"center_y":0.55}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "5"
+            on_release:
+                root.number_5()
+        Button:
+            pos_hint:{"center_x":0.65,"center_y":0.55}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "6"
+            on_release:
+                root.number_6()
+        Button:
+            pos_hint:{"center_x":0.35,"center_y":0.4}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "7"
+            on_release:
+                root.number_7()
+        Button:
+            pos_hint:{"center_x":0.5,"center_y":0.4}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "8"
+            on_release:
+                root.number_8()
+        Button:
+            pos_hint:{"center_x":0.65,"center_y":0.4}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "9"
+            on_release:
+                root.number_9()
+        Button:
+            pos_hint:{"center_x":0.35,"center_y":0.25}
+            size_hint:0.15,0.15
+            font_size: 22
+            text: "0"
+            on_release:
+                root.number_0()
+        Button:
+            pos_hint:{"center_x":0.575,"center_y":0.25}
+            size_hint:0.30,0.15
+            font_size: 22
+            text: "Limpar"
+            on_release:
+                root.delete_info()
+
+        Button:
+            pos_hint:{"center_x":0.5,"center_y":0.1}
+            size_hint:0.45,0.15
+            font_size: 22
+            text: "Procurar exame"
+            on_release:
+                root.update()
+
+               
