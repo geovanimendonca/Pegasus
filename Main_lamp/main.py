@@ -207,7 +207,6 @@ class Play(Screen):
                                 tempo_exame_segundos = datetime.now()
                                 tempo_exame_segundos_1 = new_final - tempo_exame_segundos
                                 if tempo_exame_segundos_1 <= time_export_image:
-                                    #print("condicao ok para exportar imagem")
                                     self.export()
                                     time_export_image = time_export_image - timedelta(seconds = 30)
                                 string_time = str(tempo_exame_segundos_1).split(".")[0]

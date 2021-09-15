@@ -38,10 +38,8 @@ def main(four_digit_code,
     c.scale(1,-1)
     # Inserting Logo into the Canvas at required position
     try:
-       # c.drawImage("Wallpaper/logo_ibmp.png",0,0,width=132,height=40)
         c.drawImage("Wallpaper/logo_fiocruz.png",(132+50)*2,-50,width = 132,height = 40)
         c.drawImage("/home/pi/Desktop/Lamp Chip/Main_lamp/Resultado/resultado_ident.png",(132+50)*1.5,-770,width = 211.2,height = 281.6)
-        #c.drawImage("Wallpaper/logo_biomanguinhos.png",132+50+132+50,0,width=132,height=40)
     except:
         print("Não foi possivel carregar a imagem")
     # Again Inverting Scale For strings insertion
@@ -52,8 +50,6 @@ def main(four_digit_code,
     c.setFont("Helvetica-Bold",12)
     c.drawCentredString(297.5,0,"Resultado")
     c.translate(0,20)
-    #c.drawCentredString(297.5,0,"LAMP on a chip")
-    #c.translate(0,10)
     c.setFont("Helvetica-Bold",12)
     c.translate(50,14)
     c.drawString(0,0, "Amostra 1")
@@ -99,10 +95,6 @@ def main(four_digit_code,
     c.drawString(270,14*2, "Sexo")
     c.setFont("Helvetica",12)
     c.drawString(270,14*3, paciente_sexo)
-    #c.setFont("Helvetica-Bold",12)
-    #c.drawString(0,14*4+10, "Código do SUS/Paciente")
-    #c.setFont("Helvetica",12)
-    #c.drawString(0,14*5+10, paciente_codigo_sus)
     c.setFont("Helvetica-Bold",12)
     c.drawString(0,14*4+10, "Data de nascimento")
     c.setFont("Helvetica",12)
@@ -177,25 +169,3 @@ def main(four_digit_code,
     for file in dir:
         if file == "Laudo.pdf":
             shutil.move(file,"Laudo/"+str(four_digit_code)+"/"+file)
-
-            
-'''
-main('Test2',
-        'João Da Silva',
-        'Masculino',
-        'Info excluida',
-        '10/01/1990',
-        'José Santos',
-        '12345',
-        'joao@medico.com',
-        'Paraná (PR)',
-        'Reagente',
-        'Reagente',
-        'RT-LAMP',
-        'Covid-19',
-        'Paulo@executor.com',
-        '1235',
-        'Paulo@executor.com',
-        'Curitiba BR')
-
-'''

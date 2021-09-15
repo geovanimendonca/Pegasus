@@ -24,11 +24,7 @@ bucket = client.get_bucket('pythondbtest-a8bdf.appspot.com') # Caminho do Storag
 # ---------------------------- [STORAGE] --------------------------------------------------------------
 
 #---- Upload -----
-'''
-ImagePath = ('tom.jpeg')
-ImageBlob = bucket.blob('Pasta/Tom2') # Caminho e nome do arquivo, só o nome -> cria na raiz
-ImageBlob.upload_from_filename(ImagePath)
-'''
+
 def upload_laudo(path_on_cloud, path_local):
     bucket.blob(path_on_cloud).upload_from_filename(path_local) # Caminho e nome do arquivo, só o nome -> cria na raiz
     get_file_name = bucket.get_blob(path_on_cloud)
@@ -110,9 +106,6 @@ def load_data(Db_collection, Db_document, campo):
         return exp[campo]
     except:
         return("Erro")
-        
-#load_data('Pegasus', 'Exame', '4115')
-#load_data('Pegasus','Exame','CPF paciente')
 
 
 def upload_exame(ID,VAR1,VAR2,VAR3,VAR4,VAR5,VAR6,VAR7,VAR8,VAR9,VAR10,VAR11,VAR12,VAR13,VAR14,VAR15,VAR16):

@@ -46,13 +46,6 @@
             #bold:True
             pos_hint: {"x":0.22, "y":0.65}
             font_size: 36
-        #Label:
-        #    text: "Pegasus"
-        #    size_hint: 0.01, 0.1
-        #    color:[0,0,0,1]
-        #    bold:True
-        #    pos_hint: {"x":0.22, "y":0.55}
-        #    font_size: 36
 
         TextInput:
             pos_hint: {"x":0.5, "y":0.8}
@@ -78,16 +71,7 @@
             multiline: False
             password: True
             hint_text:"Senha"
-         
-        #Button:
-        #    pos_hint:{"x":0.94,"y":0.94}
-        #    size_hint: 0.05, 0.05
-        #    font_size: 20
-        #    text: "X"
-        #    color:[1,1,1,1]
-        #    on_release:
-        #        root.manager.transition.duration=0
-        #        root.close_app()   
+           
         Button:
             pos_hint:{"x":0.56,"y":0.5}
             size_hint: 0.18, 0.08
@@ -224,12 +208,6 @@
             color:[0,0,0,1]
             size_hint: 0.5, 0.1
             
-       # Button:
-       #     pos_hint:{"center_x":0.1,"center_y":0.9}
-       #     size_hint:0.1,0.15
-            
-            
-            
         Button:
             pos_hint:{"x":0.155,"y":0.25}
             size_hint: 0.3, 0.45
@@ -246,7 +224,6 @@
             background_down : 'Wallpaper/button_consult_history.png'
             on_release:
                 root.manager.transition.duration=0
-                
         
 <TipoExame>:
     canvas.before:
@@ -538,15 +515,6 @@
             source: 'Wallpaper/background.png'
             
     FloatLayout:
-        
-       # Label:
-       #     text: "Exame realizado com sucesso!"
-       #     size_hint: 0.01, 0.1
-       #     color:[0,0,0,1]
-       #     bold:True
-       #     pos_hint: {"x":0.50, "y":0.52}
-       #     font_size: 36
-
         Label:
             
             id: label_salvo
@@ -584,8 +552,6 @@
                 root.manager.transition.duration=0
                 root.on_enter()
         
-                
-         
 <Qrcode>:
     canvas.before:
         Rectangle:
@@ -699,5 +665,3 @@
             text: "Procurar exame"
             on_release:
                 root.update()
-
-               
